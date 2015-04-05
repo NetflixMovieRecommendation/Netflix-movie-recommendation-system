@@ -34,6 +34,3 @@ function data = fileReader(location)
         fclose(file);
     end
 end
-
-
-
