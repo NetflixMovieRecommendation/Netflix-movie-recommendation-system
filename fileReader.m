@@ -1,8 +1,8 @@
-function data = fileReader(location)
+function data = fileReader()
 
     %path = location;
-    path = 'netflix/training_set/';
-    % path = 'smallTrain/';
+    % path = 'netflix/training_set/';
+    path = 'smallTrain/';
     fileNames = dir(fullfile(path, '*.txt'));
     fileLen = length(fileNames);
 
