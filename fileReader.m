@@ -1,8 +1,10 @@
-function data = fileReader(location)
+function trainData = fileReader()
+
 
     % path = location;
     % path = 'netflix/training_set/';
     % path = 'smallTrain/';
+
     fileNames = dir(fullfile(path, '*.txt'));
     fileLen = length(fileNames);
 
@@ -16,9 +18,9 @@ function data = fileReader(location)
         
         tempData = [dataCell{1} dataCell{2}];
         if i == 1
-            data = tempData;
+            trainData = tempData;
         else
-            data = fullOutJoin(data, tempData);
+            trainData = fullOutJoin(trainData, tempData);
         end
 %         % cell merge by columns
 %         % store the size of current file
