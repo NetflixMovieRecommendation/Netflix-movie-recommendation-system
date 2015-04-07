@@ -10,7 +10,7 @@ end
 
 xx = 1 : size(testPair, 1);
 scatter(xx.', testPair(:, 3)); 
-axis([0 550 0 5.5]);
+axis([0 500 0 5.5]);
 hold on;
 scatter(xx.', predRating);
-axis([0 550 0 5.5]);
+axis([0 500 0 5.5]);

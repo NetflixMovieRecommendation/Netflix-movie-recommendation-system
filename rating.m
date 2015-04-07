@@ -35,4 +35,5 @@ for n = 1 : numOfRow
 end
 
 result = count / numOfRow;
+
 end
