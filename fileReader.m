@@ -14,9 +14,7 @@ function trainData = fileReader()
         % skip the first row
         textscan(file, '%*s', 1);
         % userID, rating, date omitted here
-        % dataCell = textscan(file, '%u32 %u32 %*[^\n]','Delimiter',',');
-        % for transformation to sparse matrix
-        dataCell = textscan(file, '%f %f %*[^\n]','Delimiter',',');
+        dataCell = textscan(file, '%u32 %u32 %*[^\n]','Delimiter',',');
         
         tempData = [dataCell{1} dataCell{2}];
         if i == 1
@@ -24,7 +22,6 @@ function trainData = fileReader()
         else
             trainData = fullOutJoin(trainData, tempData);
         end
-        trainData = sparse(trainData);
 %         % cell merge by columns
 %         % store the size of current file
 %         fileSize = [fileSize; size(dataCell{1},1)];
