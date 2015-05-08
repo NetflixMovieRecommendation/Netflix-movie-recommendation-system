@@ -3,7 +3,7 @@ function trainData = fileReader()
 
     % path = location;
     % path = 'netflix/training_set/';
-    % path = 'smallTrain/';
+    path = 'smallTrain/';
 
     fileNames = dir(fullfile(path, '*.txt'));
     fileLen = length(fileNames);
