@@ -3,12 +3,14 @@ function trainData = fileReader()
 
     % path = location;
     % path = 'netflix/training_set/';
-    path = 'smallTrain/';
+    % path = 'smallTrain/';
+    path = 'training_set/';
 
     fileNames = dir(fullfile(path, '*.txt'));
     fileLen = length(fileNames);
 
-    for i = 1 : fileLen
+    for i = 1 : 1000
+        i
         fullLocation = strcat(path,fileNames(i).name);
         file = fopen(fullLocation);
         % skip the first row

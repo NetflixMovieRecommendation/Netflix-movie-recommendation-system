@@ -8,8 +8,9 @@ testPair = testReader();
 
 % predictMatrix = matrixFactor(double(trainData(:,2:size(trainData, 2))), size(trainData, 2) - 1, 7000, 0.00015, 0.002, 0.002);
 
-predictMatrix = mf(double(trainData(:,2:size(trainData, 2))), size(trainData, 2) - 1);
+% predictMatrix = mf(double(trainData(:,2:size(trainData, 2))), size(trainData, 2) - 1);
 
+predictMatrix = svds_default(trainData);
 predict = [trainData(:,1) predictMatrix];
 
 roundPredict = round(predict);
