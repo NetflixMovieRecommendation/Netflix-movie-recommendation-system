@@ -24,7 +24,8 @@ function testPair = testReader()
     %while ~feof(fileID)
         % movid = textscan(fileID, '%s',1,'Delimiter','\n');
         % testDataCell = textscan(fileID, formatSpec, 'Delimiter', ',','HeaderLines',1);
-        formatSpec = '%u32 %s';
+        % formatSpec = '%u32 %s';
+        formatSpec = '%f %s';
         testDataCell = textscan(fileID, formatSpec);
     
     %end
